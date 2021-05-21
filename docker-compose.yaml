@@ -6,5 +6,5 @@ services:
             dockerfile: Dockerfile
         image: topaz-test:latest
         container_name: topaz-test
-    volumes: 
-        - files:/usr/src/files
+        volumes: 
+            - ./files:/usr/src/files
