@@ -86,13 +86,13 @@ class ServerManager:
             Exception: Quantidade de ticks precisa ser maior ou igual a 1 e menor ou igual a 10.
             Exception: Quantidade de usuarios precisa ser maior ou igual a 1 e menor ou igual a 10.
         """
-        if not (1 <= ttask <= 10):
+        if not isinstance(ttask, int) or not (1 <= ttask <= 10):
             raise Exception(
-                "Argumento 'ttask' precisa ser maior ou igual a 1 e menor ou igual a 10."
+                "Argumento 'ttask' precisa ser do tipo 'int' e maior ou igual a 1 e menor ou igual a 10."
             )
-        if not (1 <= umax <= 10):
+        if not isinstance(umax, int) or not (1 <= umax <= 10):
             raise Exception(
-                "Argumento 'umax' precisa ser maior ou igual a 1 e menor ou igual a 10."
+                "Argumento 'umax' precisa ser do tipo 'int' e maior ou igual a 1 e menor ou igual a 10."
             )
         self.ttask = ttask
         self.umax = umax

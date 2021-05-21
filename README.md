@@ -8,6 +8,7 @@
 
 Para ambiente de containers é necessario instalar:
 - Docker
+
 Construir a imagem:
 ```bash
 docker-compose build
@@ -18,7 +19,7 @@ Para o ambiente local é necessario instalar:
 - Python 3.8
 - Poetry
 
-Foi necessario criar o arquivo `.env` para informando o root do projeto ao VSCODE.   
+Foi necessario criar o arquivo `.env` para informar o root do projeto ao VSCODE.   
 Exemplo:
 ```
 PYTHONPATH=./topaz_test
@@ -68,9 +69,8 @@ Um arquivo onde cada linha contém uma lista de servidores disponíveis no ﬁna
 
 ### 2.3 Limites 
 
-1 ≤ ttask ≤ 10
-
-1 ≤ umax ≤ 10
+- 1 ≤ ttask ≤ 10
+- 1 ≤ umax ≤ 10
 
 ### 2.4 Exemplo 
 
@@ -101,7 +101,6 @@ output.txt
 15
 ```
 
-
 ### 2.5 Detalhamento do exemplo 
 
 ttask = 4 (valor da primeira linha do input.txt)
@@ -120,7 +119,7 @@ umax = 2 (valor da segundo linha do input.txt)
 | 8 | | 1 | 1 servidor para 1 usuário. (nenhum servidor criado ou removido)
 | 9 | | 1 | 1 servidor para 1 usuário. (nenhum servidor criado ou removido)
 | 10 | | 0 | nunhum servidor para nenhum usuário. (nenhum servidor criado ou removido)
-| | | 15 | Custo Total: R$ 1 x 5 ticks (primeira VM) + R$ 1 x 4 ticks) (segunda VM) + R$1 x 6 ticks (terceira VM) = R$15
+| | | 15 | Custo Total: R$ 1 x 5 ticks (primeira VM) + R$ 1 x 4 ticks (segunda VM) + R$1 x 6 ticks (terceira VM) = R$15
 
 ### 2.6 Critérios de avaliação 
 
