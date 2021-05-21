@@ -8,6 +8,7 @@
 
 Para ambiente de containers é necessario instalar:
 - Docker
+- Docker Compose
 
 Construir a imagem:
 ```bash
