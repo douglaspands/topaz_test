@@ -1,7 +1,8 @@
+import sys
 from time import time
 
+from config import FILE_INPUT, FILE_OUTPUT, logging
 from server_manager import ServerManager
-from config import logging, FILE_INPUT, FILE_OUTPUT
 
 logger = logging.getLogger("topaz_test")
 
@@ -19,8 +20,8 @@ def main() -> int:
         ttask = None
         umax = None
         server_manager = None
-        with open(FILE_OUTPUT, 'w') as file_output:
-            with open(FILE_INPUT, 'r') as file_input:
+        with open(FILE_OUTPUT, "w") as file_output:
+            with open(FILE_INPUT, "r") as file_input:
                 for num, line in enumerate(file_input):
                     if num == 0:
                         ttask = int(line)
@@ -31,7 +32,9 @@ def main() -> int:
                         continue
                     else:
                         if line.strip().isdigit():
-                            report = server_manager.new_task_for_each_user(amount_users=int(line))
+                            report = server_manager.new_task_for_each_user(
+                                amount_users=int(line)
+                            )
                             file_output.write(f"{report}\n")
             if server_manager:
                 while server_manager.has_busy_server:
@@ -46,5 +49,9 @@ def main() -> int:
     return return_code
 
 
-if __name__ == "__main__":
-    main()
+def init():
+    if __name__ == "__main__":
+        sys.exit(main())
+
+
+init()
