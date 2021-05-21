@@ -1,5 +1,6 @@
 import os
 import logging
+from decimal import Decimal
 
 from decouple import config
 
@@ -13,6 +14,8 @@ logging.basicConfig(
     level=LOG_LEVEL,
 )
 
-FILE_DIR = os.path.abspath(os.path.join(os.getcwd(), "..", "files"))
+FILE_DIR = os.path.join(os.getcwd(), "files")
 FILE_INPUT = os.path.join(FILE_DIR, "input.txt")
 FILE_OUTPUT = os.path.join(FILE_DIR, "output.txt")
+
+TICK_COST = Decimal("1")
