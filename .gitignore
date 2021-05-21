@@ -1,6 +1,5 @@
 .venv
-.vscode/*
-!.vscode/settings.json
+.vscode
 .env
 .pytest_cache
 __pycache__

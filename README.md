@@ -4,7 +4,7 @@
 
 ### 1.1 REQUISITOS
 
-#### 1.1.1 DOCKER
+#### 1.1.1 RODAR COM O DOCKER
 
 Para ambiente de containers é necessario instalar:
 - Docker
@@ -13,25 +13,37 @@ Construir a imagem:
 ```bash
 docker-compose build
 ```
-#### 1.1.2 LOCAL
+#### 1.1.2 RODAR LOCAL
 
 Para o ambiente local é necessario instalar:
 - Python 3.8
 - Poetry
 
-Foi necessario criar o arquivo `.env` para informar o root do projeto ao VSCODE.   
-Exemplo:
-```
-PYTHONPATH=./topaz_test
-```
 As dependencias da aplicação são instaladas atraves do comando:
 ```bash
 poetry install
 ```
 
+#### 1.1.3 CONFIGURAÇÕES DO VSCODE
+
+Foi necessario criar o arquivo `.env` para informar o root do projeto:   
+```
+PYTHONPATH=./topaz_test
+```
+
+O arquivo de configurações `.vscode/settings.json` ficou conforme abaixo:
+```JSON
+{
+    "python.formatting.provider": "black",
+    "python.pythonPath": ".venv/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}
+```
+
 ### 1.2 INICIAR APLICACAO
 
-#### 1.2.1 DOCKER
+#### 1.2.1 COM DOCKER
 ```bash
 docker-compose up
 ```
