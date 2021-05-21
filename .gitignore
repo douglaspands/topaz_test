@@ -1,2 +1,8 @@
 .venv
-.vscode
+.vscode/*
+!.vscode/settings.json
+.env
+.pytest_cache
+__pycache__
+.coverage
+htmlcov
